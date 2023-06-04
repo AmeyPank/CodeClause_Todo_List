@@ -1,0 +1,43 @@
+.input-container {
+    position: relative;
+}
+
+.input-container input {
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    border-radius: 5pc;
+}
+
+.input-container input::placeholder {
+    padding-left: 5px;
+}
+
+#add-todo-btn {
+
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 6px 12px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    background-color: rgb(107, 207, 246);
+}
+
+#add-todo-btn:hover {
+    color: rgb(255, 250, 250);
+    background-color: rgb(129, 250, 123);
+}
+
+.input-container input {
+    border: 1px solid grey;
+    border-bottom-right-radius: 1px;
+    background-color: #f6d365;
+    /* Add other styles as needed */
+}
+input:focus{
+    outline: none;
+}

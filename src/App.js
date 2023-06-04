@@ -1,6 +1,6 @@
 
 import './App.css';
-import TaskApp from './Components/TastManager';
+import TaskApp from './Components/TaskManager/TastManager';
 
 function App() {
   return (

@@ -1,41 +1,46 @@
 import { useReducer } from "react";
-import TaskList from "./TaskList.js";
-import AddTask from "./Addtask.js";
-import "./styles.css"
+import TaskList from "../TaskList/TaskList.js";
+import AddTask from "../Addtask/Addtask.js";
+import "./styles.css";
 
 export default function TaskApp() {
     const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+
     function handleAddTask(text) {
         dispatch({
             type: "added",
             id: nextId++,
-            text: text
+            text: text,
         });
     }
+
     function handleChangeTask(task) {
         dispatch({
             type: "changed",
-            task: task
+            task: task,
         });
     }
+
     function handleDeleteTask(taskId) {
         dispatch({
             type: "deleted",
-            id: taskId
+            id: taskId,
         });
     }
+
     return (
-        <>
-            <h1>TO-DO LIST</h1>
+        <div className="app-container">
+            <h1 className="title">TO-DO LIST</h1>
             <AddTask onAddTask={handleAddTask} />
             <TaskList
                 tasks={tasks}
                 onChangeTask={handleChangeTask}
                 onDeleteTask={handleDeleteTask}
             />
-        </>
+        </div>
     );
 }
+
 function tasksReducer(tasks, action) {
     switch (action.type) {
         case "added": {
@@ -44,8 +49,8 @@ function tasksReducer(tasks, action) {
                 {
                     id: action.id,
                     text: action.text,
-                    done: false
-                }
+                    done: false,
+                },
             ];
         }
         case "changed": {
@@ -65,9 +70,10 @@ function tasksReducer(tasks, action) {
         }
     }
 }
+
 let nextId = 3;
 const initialTasks = [
     { id: 0, text: "Philosopher’s Path", done: true },
     { id: 1, text: "Visit the temple", done: false },
-    { id: 2, text: "Drink matcha", done: false }
+    { id: 2, text: "Drink matcha", done: false },
 ];

@@ -1,0 +1,93 @@
+.description {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Change to flex-start */
+    width: 400px;
+    /* Adjust the width as needed */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+.task {
+    margin-bottom: 1rem;
+    margin: 2rem;
+
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(62, 80, 2, 0.2);
+}
+
+.buttons {
+    display: flex;
+    margin-left: auto;
+    /* Add this line */
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.description textarea {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.description .text {
+    text-align: left;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px;
+    border: none;
+    resize: none;
+    outline: none;
+}
+
+.text {
+    flex-grow: 1;
+    margin-right: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.text {
+    margin-right: 10px;
+}
+
+.buttons {
+    display: flex;
+}
+
+
+
+.save {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.cancel {
+    background-color: #ff0000;
+    color: #fff;
+}
+
+.edit {
+    background-color: #2196f3;
+    color: #fff;
+}
+
+.delete {
+    background-color: #ff0000;
+    color: #fff;
+}

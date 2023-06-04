@@ -1,0 +1,32 @@
+
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 20px;
+}
+
+/* CSS for TaskList component */
+.tasks-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.tasks-container ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.empty-tasks {
+    color: #999;
+    padding: 10px;
+    text-align: center;
+}
