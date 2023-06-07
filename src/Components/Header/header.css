@@ -1,0 +1,22 @@
+.heading {
+    box-sizing: border-box;
+    background-color: #4a4a4a;
+    padding: 0px;
+    margin-top: 0;
+    text-align: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.heading__title {
+    font-size: 24px;
+    margin-top: 0px;
+    color: #b1b1b1;
+    padding-top: 5px;
+}
+
+.heading__subtitle {
+    
+    font-size: 16px;
+    color: #a3a3a3;
+}

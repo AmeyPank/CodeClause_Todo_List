@@ -1,10 +1,14 @@
-import { useReducer } from "react";
+import { useEffect, useReducer } from "react";
 import TaskList from "../TaskList/TaskList.js";
 import AddTask from "../Addtask/Addtask.js";
 import "./styles.css";
 
 export default function TaskApp() {
-    const [tasks, dispatch] = useReducer(tasksReducer, initialTasks);
+    const [tasks, dispatch] = useReducer(tasksReducer, [], initializeTasks);
+
+    useEffect(() => {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+    }, [tasks]);
 
     function handleAddTask(text) {
         dispatch({
@@ -30,7 +34,6 @@ export default function TaskApp() {
 
     return (
         <div className="app-container">
-            <h1 className="title">TO-DO LIST</h1>
             <AddTask onAddTask={handleAddTask} />
             <TaskList
                 tasks={tasks}
@@ -77,3 +80,8 @@ const initialTasks = [
     { id: 1, text: "Visit the temple", done: false },
     { id: 2, text: "Drink matcha", done: false },
 ];
+
+function initializeTasks() {
+    const storedTasks = localStorage.getItem("tasks");
+    return storedTasks ? JSON.parse(storedTasks) : initialTasks;
+}

@@ -1,12 +1,17 @@
-
-
 .app-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
     text-align: center;
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    background-color: rgb(128, 128, 128);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    width: 90%;
 }
 
 .title {
@@ -15,16 +20,25 @@
 
 /* CSS for TaskList component */
 .tasks-container {
-    padding: 20px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
+    width: 100%;
+
 }
 
 .tasks-container ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     list-style-type: none;
     padding: 0;
     margin: 0;
+    margin-bottom: 2rem;
+    width: 100%;
 }
+
 .empty-tasks {
     color: #999;
     padding: 10px;

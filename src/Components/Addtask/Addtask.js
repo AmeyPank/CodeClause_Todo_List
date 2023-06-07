@@ -18,6 +18,7 @@ export default function AddTask({ onAddTask }) {
 
     return (
         <div className="header">
+            <ToastContainer />
             <div className="input-container">
                 <input
                     placeholder="What you want to do..."
@@ -30,9 +31,7 @@ export default function AddTask({ onAddTask }) {
                 >
                     ADD
                 </button>
-
             </div>
-            <ToastContainer />
         </div>
 
     );

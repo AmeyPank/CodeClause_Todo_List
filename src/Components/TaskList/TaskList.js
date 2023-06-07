@@ -5,7 +5,7 @@ import { MdDataSaverOn, MdOutlineCancel } from "react-icons/md";
 import "./styles.css"
 export default function TaskList({ tasks, onChangeTask, onDeleteTask }) {
     return (
-        <div className="tasks-container">
+        <div className="tasks-container ">
             <ul>
                 {tasks && tasks.length > 0 ? (
                     tasks.map((task) => (
